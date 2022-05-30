@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
     <body>
+        <head>
+            <meta charset="utf-8">
+            <title>Calculator</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+
         <p>Calculator</p>
 
-        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <form>
             <input type="number" id="a" value="50">
             +<input type="number" id="b" value="25">
-            =<output name="x" for="a b"></output>
+            =<output id="c"></output>
+
+            <br><button type="button" name="Pocitaj!" onclick="pocitaj()">Test</button>
         </form>
+
+        <script type="text/javascript">            
+            function pocitaj() {
+                var result = parseInt(a.value)+parseInt(b.value);
+                // document.getElementById('c').value = result;
+                c.value = result;
+                console.log('a+b=', result);
+            };
+        </script>
 
     </body>
 </html>
